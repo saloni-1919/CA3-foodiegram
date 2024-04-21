@@ -1,0 +1,176 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  width: 100%; 
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px; 
+}
+
+section img {
+  width: 200px;
+  height: auto; 
+}
+
+h2 {
+  color: #4CAF50; 
+  padding: 10px 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-100px); }
+  to { transform: translateY(0); }
+}
+
+#searchedMeals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 10px; 
+  margin-top: 20px; 
+}
+
+#recently {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 10px; 
+  margin-top: 20px; 
+}
+
+.search-item {
+  box-sizing: border-box; 
+  text-align: center; 
+}
+
+.search-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-item p {
+  font-size: 10px;
+  margin-top: 5px; 
+}
+
+#Button {
+  position:absolute; 
+  top: 20px;
+  right: 101px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#about {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#Button:hover {
+  background-color: #45a049;
+}
+
+#about:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+  section {
+    width: calc(50% - 6px); 
+    margin-bottom: 20px;
+  }
+
+  #searchedMeals,
+  #recently {
+    grid-template-columns: repeat(1, 1fr); 
+    grid-gap: 2px; 
+  }
+
+  .search-item {
+    width: 100%; 
+    margin-bottom: 20px; 
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .search-item img {
+    width: 90%; 
+    height: auto; 
+  }
+
+  #Button,
+  #about {
+    top: 20px;
+    right: 20px; 
+  }
+}
